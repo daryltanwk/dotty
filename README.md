@@ -17,13 +17,13 @@ This repository uses GNU Stow to manage dotfiles. Stow creates symbolic links fr
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/daryltanwk/dotty.git ~/.dotfiles
+    git clone https://github.com/daryltanwk/dotty.git ~/dotty
     ```
 
 1.  **Navigate to the dotfiles directory:**
 
     ```bash
-    cd ~/.dotfiles
+    cd ~/dotty
     ```
 
 1.  **Append snippet to `~/.bashrc` file**
@@ -45,7 +45,7 @@ This repository uses GNU Stow to manage dotfiles. Stow creates symbolic links fr
     stow tmux
     ```
 
-    This command will create symbolic links in your home directory (`~`) pointing to the files within the `tmux` directory in your dotfiles repository (e.g., `~/.tmux.conf` will link to `~/.dotfiles/tmux/.tmux.conf`).
+    This command will create symbolic links in your home directory (`~`) pointing to the files within the `tmux` directory in your dotfiles repository (e.g., `~/.tmux.conf` will link to `~/dotty/tmux/.tmux.conf`).
 
     Repeat this step for any other dotfile directories you have in this repository (e.g., `stow bash`).
 
@@ -53,8 +53,8 @@ This repository uses GNU Stow to manage dotfiles. Stow creates symbolic links fr
 
 To add new dotfiles or configurations:
 
-1.  Create a new directory in the `~/.dotfiles` repository for the application or configuration (e.g., `nvim` for Neovim).
-2.  Place the configuration files inside this new directory, mirroring the structure they would have in your home directory. For example, if your Neovim config is `~/.config/nvim/init.vim`, you would place it in `~/.dotfiles/nvim/.config/nvim/init.vim`.
+    1.  Create a new directory in the `~/dotty` repository for the application or configuration (e.g., `nvim` for Neovim).
+    2.  Place the configuration files inside this new directory, mirroring the structure they would have in your home directory. For example, if your Neovim config is `~/.config/nvim/init.vim`, you would place it in `~/dotty/nvim/.config/nvim/init.vim`.
 3.  Commit your changes to the repository.
 4.  On any machine where you want to deploy these new dotfiles, pull the latest changes and run `stow <new_directory_name>` (e.g., `stow nvim`).
 
@@ -66,4 +66,4 @@ To remove dotfiles managed by stow, use the `-D` flag:
 stow -D tmux
 ```
 
-This will remove the symbolic links created by `stow tmux` from your home directory. The original files in the `~/.dotfiles/tmux` directory will remain untouched.
+    This will remove the symbolic links created by `stow tmux` from your home directory. The original files in the `~/dotty/tmux` directory will remain untouched.
