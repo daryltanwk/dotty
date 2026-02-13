@@ -1,5 +1,6 @@
 export HISTTIMEFORMAT="%F %T "
 shopt -s histappend
-HISTSIZE=100000
-HISTFILESIZE=10000000
-PROMPT_COMMAND="history -a;history -n"
+HISTSIZE=50000
+HISTFILESIZE=100000
+HISTCONTROL=ignoredups:erasedups
+PROMPT_COMMAND="history -a"
